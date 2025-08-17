@@ -1,0 +1,22 @@
+graph TD
+    A[Usuário] --> B(Frontend - React)
+    B --> C(Backend - Flask)
+    C --> D[Banco de Dados - PostgreSQL]
+    C --> E(Serviços Externos - Opcional)
+    D --> C
+    C --> B
+    B --> A
+
+    subgraph Módulos do Backend
+        C1(API de Estoque) --> D
+        C2(API de Frigobar) --> D
+        C3(API de Pedidos) --> D
+        C4(API de Reservas) --> D
+    end
+
+    C --> C1
+    C --> C2
+    C --> C3
+    C --> C4
+
+
